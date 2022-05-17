@@ -4,6 +4,19 @@ import time
 import mediapipe as mp
 
 
+
+
+VISUALIZE_FACE_POINTS = False
+
+mpDraw = mp.solutions.drawing_utils
+mpFaceMesh = mp.solutions.face_mesh
+faceMesh = mpFaceMesh.FaceMesh()
+drawing_spec = mpDraw.DrawingSpec(thickness=1, circle_radius=1)
+
+nose_landmarks = [49, 279, 197, 2, 5]
+
+
+
 st.title("Webcam Live")
 run = st.checkbox('Run')
 FRAME_WINDOW = st.image([])
